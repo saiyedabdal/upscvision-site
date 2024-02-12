@@ -32,8 +32,8 @@ import styles from './styles.module.css'
 // dynamic imports for optional components
 // -----------------------------------------------------------------------------
 
-const Code = dynamic(() =>
-  import('react-notion-x/build/third-party/code').then(async (m) => {
+//const Code = dynamic(() =>
+  /*import('react-notion-x/build/third-party/code').then(async (m) => {
     // add / remove any prism syntaxes here
     await Promise.allSettled([
       import('prismjs/components/prism-markup-templating.js'),
@@ -69,8 +69,7 @@ const Code = dynamic(() =>
       import('prismjs/components/prism-yaml.js')
     ])
     return m.Code
-  })
-)
+  })*/
 
 const Collection = dynamic(() =>
   import('react-notion-x/build/third-party/collection').then(
@@ -155,7 +154,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     () => ({
       nextImage: Image,
       nextLink: Link,
-      Code,
+      //Code,
       Collection,
       Equation,
       Pdf,
